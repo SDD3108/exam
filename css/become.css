@@ -1,0 +1,22 @@
+.email {
+  border-radius: 15px;
+  width: 549px;
+  height: 64px;
+  position: relative;
+}
+
+.email::placeholder {
+  padding-left: 24.18px;
+}
+
+.email [type=email] {
+  padding-left: 24.18px;
+}
+
+.join {
+  border-radius: 8px;
+  width: 130px;
+  height: 48px;
+  top: 8px;
+  right: 12.38px;
+}/*# sourceMappingURL=become.css.map */
