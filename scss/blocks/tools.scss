@@ -1,0 +1,273 @@
+.tools__content {
+    margin: 200px auto 0;
+    @extend %flex-column;
+    @media (max-width:$mobile-size){
+        margin-top: 75px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-top: 150px;
+    }
+}
+.tools__content-top {
+    text-align: center;
+    width: 455px;
+    animation: appearance-up 1s ease-in-out;
+    @media (max-width:$mobile-size){
+        width: 320px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+@keyframes appearance-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.tools__content-bottom {
+    @extend %flex-column;
+    margin-top: 90px;
+    gap: 100px;
+    @media (max-width:$mobile-size){
+        gap: 0;
+        margin-top: 45px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-top: 60px;
+        gap: 60px;
+    }
+}
+.tools-blocks {
+    @extend %grid;
+    grid-template-columns: repeat(3, 392px);
+    grid-template-rows: 294px 294px;
+    column-gap: 24px;
+    row-gap: 100px;
+    @media (max-width:$mobile-size){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        grid-template-columns: repeat(2,360px);
+        grid-template-rows: 270px 270px 270px;
+        column-gap: 16px;
+        row-gap: 37px;
+    }
+}
+.tool-block {
+    border-radius: 15px;
+    @extend %flex-center;
+    overflow: hidden;
+    @media (max-width:$mobile-size){
+        width: 295px;
+        height: 220.5px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.tool-block__content {
+    height: 228px;
+    @extend %flex-column;
+    justify-content: space-between;
+    align-items: start;
+    @media (max-width:$mobile-size){
+        width: 263px;
+        height: 184px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 300px;
+        height: 210px;
+    }
+}
+.tool__bg {
+    position: absolute;
+    border-radius: 15px;
+    width: 392px;
+    height: 294px;
+    background: rgba(40, 48, 54, 0.6);
+    filter: blur(50px);
+    overflow: hidden;
+    display: none;
+    z-index: -1;
+    @media (max-width:$mobile-size){
+        width: 295px;
+        height: 220.5px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.tool__blur-figure {
+    display: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    background-color: rgba(255, 110, 48, 0.6);
+    filter: blur(50px);
+    position: absolute;
+    right: 16px;
+    bottom: 235px;
+    @media (max-width:$mobile-size){
+        right: 11.27px;
+        bottom: 144;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.tool-block:hover .tool__blur-figure {
+    display: block;
+}
+.tool-block:hover .tool-bg {
+    display: block;
+}
+.tool-block:hover {
+    border: 2px solid #283036;
+    position: relative;
+    animation: tool-up 1s;
+}
+@keyframes tool-up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.tool-block:hover .tool-name {
+    h3 {
+        opacity: 0.9;
+    }
+    p {
+        opacity: 1;
+    }
+}
+.tool-block:hover .tool-p {
+    opacity: 0.78;
+}
+.load {
+    border: 1px solid $first-border-color;
+    border-radius: 8px;
+    width: 184px;
+    height: 64px;
+    background-color: $bg-color;
+    a {
+        @include font-style ($first-color,20px,500,none,$font-Poppins);
+        @media (max-width:$mobile-size){
+            font-size: 16px;
+        }
+        @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+    }
+    @media (max-width:$mobile-size){
+        width: 150px;
+        height: 56px;
+        margin-top: 25px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 260px;
+        height: 77px;
+        a {
+            font-size: 24px
+        }
+    }
+}
+.tool-info {
+    @extend %flex-row;
+    width: 326px;
+    @media (max-width:$mobile-size){
+        width: 263px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 300px;
+    }
+}
+.tool-block:hover .like-add {
+    background-color: $hover-color;
+}
+.tool-block:hover .like {
+    box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
+}
+.tool-block:hover .tool-visit {
+    background-color: $first-color;
+    a {
+        opacity: 1;
+    }
+}
+.tool-name-payment {
+    @extend %flex-line;
+    @media (max-width:$mobile-size){
+        img {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        img {
+            max-width: 58px;
+            max-height: 58px;
+        }
+    }
+}
+
+.tool-p {
+    @include font-style ($main-color,16px,400,187%,$font-Poppins);
+    opacity: 0.55;
+    @media (max-width:$mobile-size){
+        font-size: 12px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 14px;
+    }
+}
+.tool-name {
+    margin-left: 30px;
+    h3 {
+        opacity: 0.78;
+    }
+    p {
+        opacity: 0.55;
+    }
+    @media (max-width:$mobile-size){}
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-left: 28px;
+    }
+}
+.tool-like {
+    @extend %flex-row;
+    width: 96px;
+}
+.like-add {
+    @extend %flex-center;
+    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    background-color: $bg-color;
+    @media (max-width:$mobile-size){}
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 38px;
+        height: 38px;
+        img {
+            width: 23px;
+            height: 19px;
+        }
+    }
+}
+.tool-visit {
+    border-radius: 8px;
+    width: 106px;
+    height: 42px;
+    background-color: $bg-color;
+    @extend %flex-center;
+    a {
+        @include font-style ($main-color,16px,600,none,$font-Poppins);
+        opacity: 0.55;
+    }
+    @media (max-width:$mobile-size){}
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 100px;
+        height: 38px;
+    }
+}

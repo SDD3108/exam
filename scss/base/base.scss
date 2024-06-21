@@ -1,0 +1,135 @@
+@import './reset.scss';
+@import './vars.scss';
+@import './mixins-extends.scss';
+@import '../blocks/header.scss';
+@import '../blocks/tools.scss';
+@import '../blocks/brand.scss';
+@import '../blocks/new.scss';
+@import '../blocks/actors.scss';
+@import '../blocks/become.scss';
+@import '../blocks/footer.scss';
+
+body {
+    background: $bg-color;
+}
+section {
+    width: 1440px;
+    margin: 0 auto 0;
+    @media (max-width:$mobile-size) {
+        width: 375px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 738px;
+    }
+}
+.none {
+    @media (max-width:$mobile-size){
+        display: block;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: none;
+    }
+}
+.br-for-pc {
+    display: inline;
+    @media (max-width:$mobile-size){
+        display: none;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: none;
+    }
+}
+.br-for-mobile {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: inline;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: none;
+    }
+}
+.br-for-tablet {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: none;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: inline;
+    }
+}
+.container {
+    width: 1224px;
+    margin: 0 auto 0;
+    @media (max-width:$mobile-size) {
+        width: 330px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size) {
+        width: 736px;
+    }
+}
+.button {
+    border-radius: 8px;
+    background-color: $first-color;
+    a {
+        font-weight: 600;
+        font-family: $font-Poppins;
+    }
+}
+.input {
+    border-radius: 15px;
+    height: 64px;
+    background-color: $second-color;
+    @include font-style (none,14px,400,none,$font-Poppins);
+    color: rgba(255, 255, 255, 0.38);
+    @media (max-width:375px){
+        font-size: 10px;
+        height: 56px;
+    }
+}
+.title {
+    @include font-style ($main-color,48px,500,130%,$font-Poppins);
+    opacity: 0.9;
+    @media (max-width:375px){
+        font-size: 24px;
+    }
+}
+.description {
+    @include font-style ($main-color,18px,500,167%,$font-Poppins);
+    opacity: 0.55;
+    margin-top: 25px;
+    @media (max-width:$mobile-size){
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-top: 20px;
+    }
+}
+.mini-title {
+    @include font-style ($main-color,24px,500,none,$font-Poppins);
+    @media (max-width:$mobile-size){
+        font-size: 18px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 20px;
+    }
+}
+.mini-description {
+    @include font-style ($accent-color,18px,400,none,$font-Poppins);
+    margin-top: 13px;
+    @media (max-width:$mobile-size){
+        font-size: 14px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 16px;
+    }
+}
+.like:hover .like-img {
+    display: none;
+}
+.like-img-hover {
+    display: none;
+}
+.like:hover .like-img-hover {
+    display: block;
+}

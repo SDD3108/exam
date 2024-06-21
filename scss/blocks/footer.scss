@@ -1,0 +1,172 @@
+.footer-line {
+    width: 1440px;
+    height: 0.50px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 240px auto 0;
+    @media (max-width:$mobile-size){
+        width: 375px;
+        margin-top: 120px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 768px;
+        margin-top: 150px;
+    }
+}
+.footer__content {
+    @extend %flex-line;
+    margin: 70px 0 98px 0;
+    @media (max-width:$mobile-size){
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 624px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 45px auto 90px auto;
+    }
+}
+.footer__logo {
+    width: 260px;
+    p {
+        @include font-style ($main-color,14px,500,179%,$font-Poppins);
+        opacity: 0.55;
+        margin-top: 21px;
+    }
+    @media (max-width:$mobile-size){
+        p {
+            font-size: 10px;
+        }
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 352px;
+        p {
+            font-size: 18px;
+        }
+    }
+}
+.copyright {
+    @include font-style ($main-color,16px,500,none,$font-Poppins);
+    opacity: 0.9;
+    margin-top: 25px;
+    @media (max-width:$mobile-size){
+        font-size: 12px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 24px;
+    }
+}
+.footer-contact {
+    height: 142px;
+    margin-left: 157px;
+    @media (max-width:$mobile-size){
+        width: 148px;
+        height: 114px;
+        margin-left: 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-left: 0;
+    }
+}
+.footer-categories {
+    height: 142px;
+    margin-left: 115px;
+    @media (max-width:$mobile-size){
+        width: 89px;
+        height: 90px;
+        margin-left: 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-left: 0;
+    }
+}
+.footer-info {
+    height: 142px;
+    margin-left: 115px;
+    @media (max-width:$mobile-size){
+        width: 115px;
+        height: 118px;
+        margin-left: 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        margin-left: 0;
+    }
+}
+.pre-title {
+    @include font-style ($main-color,20px,500,none,$font-Poppins);
+    opacity: 0.9;
+    @media (max-width:$mobile-size){
+        font-size: 16px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 24px;
+    }
+}
+.footer__nav {
+    margin-top: 20px;
+}
+.footer__nav__ul {
+    @extend %flex-column;
+    align-items: normal;
+    gap: 10px;
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        gap: 12px;
+    }
+}
+.footer-li {
+    @include font-style ($main-color,16px,500,none,$font-Poppins);
+    opacity: 0.55;
+    @media (max-width:$mobile-size){
+        font-size: 12px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        font-size: 20px;
+    }
+}
+.footer-pc {
+    @media (max-width:375px){
+        display: none;
+    }
+}
+.footer-mobile {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: block;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.footer-contact-info-mobile {
+    display: none;
+    @media (max-width:$mobile-size){
+        width: 286px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.footer__container-tablet {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: none;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: flex;
+        justify-content: space-between;
+        width: 624px;
+    }
+}
+.footer__container-pc {
+    display: flex;
+    @media (max-width:$mobile-size){
+        flex-direction: column;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: none;
+    }
+}
+.footer-logo {
+    margin: 0;
+}

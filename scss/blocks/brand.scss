@@ -1,0 +1,120 @@
+.brand__content__block {
+    border-radius: 25px;
+    width: 1224px;
+    height: 253px;
+    @extend %flex-center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid $second-border-color;
+    margin-top: 200px;
+    @media (max-width:$mobile-size){
+        width: 295px;
+        height: 400px;
+        margin: 75px auto 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 736px;
+        height: 152.13px;
+        margin-top: 150px;
+    }
+}
+.brand__content {
+    z-index: 4;
+    @media (max-width:$mobile-size){
+        width: 295px;
+        height: 310px;
+        h3 {
+            font-size: 20px;
+        }
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 636px;
+        height: 86px;
+    }
+}
+.brand__content__top {
+    h3 {
+        opacity: 0.8;
+        text-align: center;
+    }
+}
+.brand__content__bottom {
+    width: 1059px;
+    @extend %flex-row;
+    margin-top: 55px;
+    @media (max-width:$mobile-size){
+        flex-direction: column;
+        justify-content: center;
+        width: 194px;
+        height: 292px;
+        gap: 35px;
+        margin: 0 auto 0;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 636px;
+        height: 30px;
+        margin-top: 34px;
+    }
+}
+.brand__figure {
+    width: 159px;
+    height: 159px;
+    border-radius: 100%;
+    background-color: rgba(255, 72, 66, 0.4);
+    filter: blur(100px);
+    position: absolute;
+    bottom: 180px;
+    right: 1149px;
+    @media (max-width:$mobile-size){
+        right: 228px;
+        bottom: 299px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 95px;
+        height: 95px;
+        bottom: 108.24px;
+        right: 690.9px;
+    }
+}
+.brand__bg {
+    position: absolute;
+    border-radius: 25px;
+    width: 1224px;
+    height: 253px;
+    filter: blur(50px);
+    background: rgba(44, 53, 61, 0.2);
+    @media (max-width:$mobile-size){
+        width: 295px;
+        height: 400px;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        width: 736px;
+        height: 152.13px;
+    }
+}
+.brand-pc {
+    @media (max-width:$mobile-size){
+        display: none;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: none;
+    }
+}
+.brand-mobile {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: block;
+        z-index: 2;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){}
+}
+.brand-tablet {
+    display: none;
+    @media (max-width:$mobile-size){
+        display: none;
+        z-index: 2;
+    }
+    @media (min-width:$mobile-size) and (max-width:$tablet-size){
+        display: block;
+    }
+}
